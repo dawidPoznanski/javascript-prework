@@ -105,4 +105,18 @@ function playGame(playerInput){
         printMessage('Komputer wygrywa!');
     } 
 
+
+    document.getElementById('rock').addEventListener('click', function(){
+        playGame(1);
+        printMessage('Twój ruch to kamień');
+    });
+    document.getElementById('paper').addEventListener('click', function(){
+        playGame(2);
+        printMessage('Twój ruch to papier');
+      });
+    document.getElementById('scissors').addEventListener('click', function(){
+        playGame(3);
+        printMessage('Twój ruch to nożyczki');
+      });
+
 }
