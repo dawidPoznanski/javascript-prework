@@ -22,7 +22,7 @@ function playGame(playerInput){
     function displayResult(argComputerMove,  argPlayerMove){
         console.log('moves', argComputerMove, argPlayerMove);
     
-        printMessage('Mój ruch to: ' + argComputerMove + 'a Ty' + argPlayerMove)
+        printMessage('Mój ruch to: ' + argComputerMove + ' a Ty ' + argPlayerMove)
 
         if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
             printMessage('Ty wygrywasz');
@@ -54,8 +54,11 @@ function playGame(playerInput){
 
     let computerMove = getMoveName(randomNumber);
 
+    let PlayerMove = getMoveName(playerInput);
+
     printMessage('Wylosowana liczba to ' + computerMove +'.')
     
+    displayResult( computerMove, PlayerMove)
     /*if (randomNumber == 1) {
         computerMove = 'kamień';
     }
@@ -71,9 +74,9 @@ function playGame(playerInput){
     
     console.log('Gracz wpisał: ' + playerInput);
 
-    let PlayerMove = getMoveName(playerInput);
+    
    */
-    if (playerInput == '1') {
+    /*if (playerInput == '1') {
         playerMove = 'kamień';
     }
     else if (playerInput == '2') {
@@ -103,20 +106,18 @@ function playGame(playerInput){
     }
     else if(computerMove == 'kamień' && playerMove == 'nożyce') {
         printMessage('Komputer wygrywa!');
-    } 
-
-
-    document.getElementById('rock').addEventListener('click', function(){
-        playGame(1);
-        printMessage('Twój ruch to kamień');
-    });
-    document.getElementById('paper').addEventListener('click', function(){
-        playGame(2);
-        printMessage('Twój ruch to papier');
-      });
-    document.getElementById('scissors').addEventListener('click', function(){
-        playGame(3);
-        printMessage('Twój ruch to nożyczki');
-      });
+    } */
 
 }
+document.getElementById('rock').addEventListener('click', function(){
+    playGame(1);
+    
+});
+document.getElementById('paper').addEventListener('click', function(){
+    playGame(2);
+    
+  });
+document.getElementById('scissors').addEventListener('click', function(){
+    playGame(3);
+    
+  });
