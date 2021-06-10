@@ -30,7 +30,7 @@ function playGame(playerInput){
 
         console.log('moves', argComputerMove, argPlayerMove);
     
-        printMessage('Mój ruch to: ' + argComputerMove + ' a Ty ' + argPlayerMove)
+        printMessage('Mój ruch to ' + argComputerMove + ', a Twój ' + argPlayerMove + '.' )
 
         if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
             printMessage('Ty wygrywasz');
@@ -58,11 +58,8 @@ function playGame(playerInput){
 
         }
 
-    let PlayerMove = getMoveName(playerInput);
-
-    printMessage('Wylosowana liczba to ' + computerMove +'.')
     
-    displayResult( computerMove, PlayerMove)
+    displayResult(computerMove, PlayerMove)
     /*if (randomNumber == 1) {
         computerMove = 'kamień';
     }
